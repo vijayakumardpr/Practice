@@ -1,7 +1,5 @@
 //Weekly Salary
 
-function chunkify(arr, size) {
-  return { arr, size }
-}
+console.log(window)
 
-console.log(chunkify([1, 2, 3, 4, 5], 2))
+console.log(console)

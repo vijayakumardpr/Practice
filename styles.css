@@ -6,8 +6,6 @@ body {
   margin: 0;
   height: 100vh;
   font-family: "Karla", sans-serif;
-  overflow-x: hidden;
-  position: relative;
 }
 
 .header {
@@ -17,7 +15,7 @@ body {
   bottom: 0;
   padding: 2em;
   background-color: #023047;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 .navbar {
@@ -32,6 +30,8 @@ body {
   border-radius: 50%;
   margin-bottom: 2rem;
   border: 5px solid #33658a;
+  background-image: url(img/vijay.png);
+  background-size: cover;
 }
 
 .profile_image {
@@ -63,16 +63,15 @@ body {
 
 section {
   height: 100vh;
-  max-width: 95%;
-  position: absolute;
+  /* max-width: 95%; */
   padding-left: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .about {
   margin-top: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .profile_title_name {
@@ -108,4 +107,9 @@ section {
 
 .social:hover {
   background-color: #023047;
+}
+
+.education_container {
+  display: flex;
+  justify-content: space-between;
 }

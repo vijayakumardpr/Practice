@@ -3,74 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <title>Challenges</title>
-    <link rel="icon" href="img/Chamelon.png" />
+    <!-- <link rel="icon" href="img/Chamelon.png" /> -->
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>All About Lizards</h1>
-    </header>
-
-    <main>
-      <div class="container">
-        <div class="columns">
-          <section class="main-content">
-            <h2 class="subhead">
-              Lizards <span class="white-text">are awesome</span>
-            </h2>
-            <img src="img/Chamelon.png" alt="chamelon" abbr title="Chamelon" />
-            <p class="param">
-              Lectus diam adipiscing faucibus consequat, auctor molestie a
-              mauris. Cras libero risus ut enim, in purus tellus scelerisque.
-              Nibh mattis dignissim lorem morbi molestie. Mauris elit at sociis
-              varius leo, facilisis convallis quis. Facilisis velit, eget dolor
-              sit arcu rhoncus urna quisque.
-            </p>
-
-            <!-- insert the unordered list here -->
-            <ul>
-              <li>dui ultricies integer</li>
-              <li>eget amet consectetur</li>
-              <li>interdum mattis</li>
-              <li>aenean nulla diam</li>
-              <li>pellentesque pellentesque duis</li>
-            </ul>
-
-            <p>
-              Adipiscing dui ultricies integer interdum mattis convallis diam
-              nascetur. Aliquet vel egestas egestas a, eget amet consectetur.
-              Sodales velit volutpat eget eget fames elit consectetur. Lectus
-              aenean nulla diam pellentesque pellentesque duis pulvinar
-              malesuada.
-            </p>
-          </section>
-
-          <aside class="sidebar">
-            <h2 class="subhead">
-              Best lizards for <span class="white-text">pets</span>
-            </h2>
-            <!-- insert the ordered list here -->
-            <ol>
-              <li>Bearded Dragon</li>
-              <li>Leopard Gecko</li>
-              <li>Crested Gecko</li>
-              <li>Blue-Tongue Skink</li>
-              <li>Green Anole</li>
-              <li>Argentine Black and White Tegu</li>
-              <li>Uromastyx</li>
-              <li>African Fat-Tailed Gecko</li>
-              <li>Chinese Water Dragon</li>
-              <li>Gold-Dust Day Gecko</li>
-            </ol>
-            <p class="source">
-              *source:
-              <a href="https://www.everythingreptiles.com/20-best-pet-lizards/"
-                >everythingreptiles.com</a
-              >
-            </p>
-          </aside>
+    <div class="container">
+      <div class="unit-header">
+        <label for="unit">Metric/Imperial unit conversion</label>
+        <input type="number" id="unit" />
+      </div>
+      <div class="unit-calculator">
+        <div class="center">
+          <p>Length (Meter/Feet)</p>
+          <span class="unit">0</span> meters = <span>0.000</span> feet |
+          <span class="unit">0</span> feet = <span>0.000</span> meters
+        </div>
+        <div class="center">
+          <p>Volume (Liters/Gallons)</p>
+          <span class="unit">0</span> liters = <span>0.000</span> gallons |
+          <span class="unit">0</span> gallons = <span>0.000</span> liters
+        </div>
+        <div class="center">
+          <p>Mass (Kilograms/Pounds)</p>
+          <span class="unit">0</span> kilos = <span>0.000</span> pounds |
+          <span class="unit">0</span> pounds = <span>0.000</span> kilos
         </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>

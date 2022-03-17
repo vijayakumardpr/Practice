@@ -5,6 +5,7 @@ input.addEventListener("input", (e) => {
   e.preventDefault()
 
   units.forEach((unit) => {
-    unit.textContent = input.value
+    if (input.value < 0) return
+    unit.textContent = input.value || 0
   })
 })

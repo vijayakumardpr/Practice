@@ -1,67 +1,28 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Inter", sans-serif;
-  background-color: #999;
-}
-.container {
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
-}
-.unit-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-  padding: 2.5rem;
-  color: white;
-  background: linear-gradient(250deg, #585dfe, #fb3796);
-}
-
-label {
-  font-weight: 800;
-  font-size: 1.3rem;
-}
-input {
-  padding: 8px;
-  outline: 0;
-  border: 0;
-  background-color: transparent;
-  margin-top: 16px;
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  text-align: center;
-  width: 60%;
-  color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-.unit-calculator {
-  display: flex;
-  flex-direction: column;
-  width: 450px;
-  background-color: white;
-  padding: 2rem;
-}
-
-.center {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial,
+    sans-serif;
+  font-weight: bold;
+  /* color: white; */
   text-align: center;
 }
 
-.unit-calculator .center p {
-  font-weight: 600;
-  line-height: 20px;
-  font-size: 14px;
+h1 {
+  color: goldenrod;
 }
 
-.center span {
-  font-size: 14px;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 0.7);
+#message-el {
+  font-style: italic;
+}
+
+button {
+  color: #016f32;
+  width: 150px;
+  background: goldenrod;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }

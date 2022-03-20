@@ -1,86 +1,78 @@
-// let player = {
-//   name: "Per",
-//   chips: 200,
+// let pwd1 = document.querySelector(".pwd1")
+// let pwd2 = document.querySelector(".pwd2")
+// let pwd3 = document.querySelector(".pwd3")
+// let pwd4 = document.querySelector(".pwd4")
+
+// let randomPasswordCharacter = [
+//   "A",
+//   "B",
+//   "C",
+//   "D",
+//   "E",
+//   "!",
+//   "@",
+//   "#",
+//   "$",
+//   "%",
+//   1,
+//   2,
+//   3,
+//   4,
+//   5,
+// ]
+
+// let passwords1 = []
+// let passwords2 = []
+// let passwords3 = []
+// let passwords4 = []
+
+// function randomPassword() {
+//   let randomNumber = Math.floor(Math.random() * randomPasswordCharacter.length)
+//   return randomPasswordCharacter[randomNumber]
 // }
 
-// let cards = []
-// let sum = 0
-// let hasBlackJack = false
-// let isAlive = false
-// let message = ""
-// let messageEl = document.getElementById("message-el")
-// let sumEl = document.getElementById("sum-el")
-// let cardsEl = document.getElementById("cards-el")
-// let playerEl = document.getElementById("player-el")
+// for (let i = 0; i < 6; i++) {
+//   passwords1.push(randomPassword())
 
-// playerEl.textContent = player.name + ": $" + player.chips
-
-// function getRandomCard() {
-//   let randomNumber = Math.floor(Math.random() * 13) + 1
-//   if (randomNumber > 10) {
-//     return 10
-//   } else if (randomNumber === 1) {
-//     return 11
-//   } else {
-//     return randomNumber
-//   }
+//   input.value = pwd1.innerText = passwords1.join("")
 // }
 
-// function startGame() {
-//   isAlive = true
-//   let firstCard = getRandomCard()
-//   let secondCard = getRandomCard()
-//   cards = [firstCard, secondCard]
-//   sum = firstCard + secondCard
-//   renderGame()
+// for (let i = 0; i < 6; i++) {
+//   passwords2.push(randomPassword())
+//   pwd2.textContent = passwords2.join("")
+// }
+// for (let i = 0; i < 6; i++) {
+//   passwords3.push(randomPassword())
+//   pwd3.textContent = passwords3.join("")
 // }
 
-// function renderGame() {
-//   cardsEl.textContent = "Cards: "
-//   for (let i = 0; i < cards.length; i++) {
-//     cardsEl.textContent += cards[i] + " "
-//   }
-
-//   sumEl.textContent = "Sum: " + sum
-//   if (sum <= 20) {
-//     message = "Do you want to draw a new card?"
-//   } else if (sum === 21) {
-//     message = "You've got Blackjack!"
-//     hasBlackJack = true
-//   } else {
-//     message = "You're out of the game!"
-//     isAlive = false
-//   }
-//   messageEl.textContent = message
+// for (let i = 0; i < 6; i++) {
+//   passwords4.push(randomPassword())
+//   pwd4.textContent = passwords4.join("")
 // }
 
-// function newCard() {
-//   if (isAlive === true && hasBlackJack === false) {
-//     let card = getRandomCard()
-//     sum += card
-//     cards.push(card)
-//     renderGame()
-//   }
+// function selectText() {
+//   const input = document.querySelector("#input")
+//   input.select()
+//   document.elecCommand("copy")
 // }
+let arr = [1, 2, 2, 1, 1, 3]
 
-let arr = [1, 2]
-
-function uniqueOccurrences(array) {
-  let occurrences = array.reduce((pre, cur) => {
+var uniqueOccurrences = function (arr) {
+  let occurrences = arr.reduce((pre, cur) => {
     pre[cur] = ++pre[cur] || 1
     return pre
   }, {})
-  let value = Object.values(occurrences)
-  let set = new Set(value)
-  let data = new Set(arr)
-  let hasDulplicate = Object.entries(set).length === Object.entries(data).length
-  return hasDulplicate
+
+  let one = Object.values(occurrences)
+  let two = [...new Set(one)]
+  return one.length === two.length
 }
 
-// const value = Object.values(uniqueOccurrences(arr))
-// let set = new Set(value)
-// let data = new Set(arr)
-// let hasDulplicate = Object.entries(set).length === Object.entries(data).length
-// console.log(hasDulplicate)
-
 console.log(uniqueOccurrences(arr))
+
+// let array = [1, 1, 4, 5]
+
+// let a = [new Set(array)]
+
+// console.log(Object.entries(a).length)

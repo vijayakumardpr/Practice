@@ -7,13 +7,43 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <p class="pwd1"></p>
-    <p class="pwd2"></p>
-    <p class="pwd3"></p>
-    <p class="pwd4"></p>
-    <input onclick="selectText()" id="input" id="copy" type="text" />
-
-    <!-- <input id="input" type="text" />
-    <button id="copys">Copy</button> -->
+    <div class="wrapper">
+      <h2>
+        Generate a <br />
+        <span>random password</span>
+      </h2>
+      <p>Never use an insecure password again.</p>
+      <button>Generate passwords</button>
+      <div class="password-container">
+        <input
+          onclick="selectText()"
+          class="pwd1"
+          id="copy"
+          value="..."
+          type="text"
+        />
+        <input
+          onclick="selectText()"
+          class="pwd2"
+          id="copy"
+          value="..."
+          type="text"
+        />
+        <input
+          onclick="selectText()"
+          class="pwd3"
+          id="copy"
+          value="..."
+          type="text"
+        />
+        <input
+          onclick="selectText()"
+          class="pwd4"
+          id="copy"
+          value="..."
+          type="text"
+        />
+      </div>
+    </div>
   </body>
 </html>

@@ -56,7 +56,7 @@ btn.addEventListener("click", (e) => {
     passwords2.push(randomPassword())
     pwd2.value = passwords2.join("")
   }
-  
+
   for (let i = 0; i < 6; i++) {
     passwords3.push(randomPassword())
     pwd3.value = passwords3.join("")
@@ -78,3 +78,34 @@ btn.addEventListener("click", (e) => {
 //   console.log(input.value.select())
 //   // document.elecCommand("copy")
 // }
+
+let number = 9629039023
+
+let last4Digits = number.toString().slice(-4)
+
+let maskedNumber = last4Digits.padStart(number.toString().length, "*")
+
+console.log(maskedNumber)
+
+var singleNumber = function (nums) {
+  const a = nums.reduce((pre, cur) => {
+    pre[cur] = ++pre[cur] || 1
+    return pre
+  }, {})
+
+  return Object.entries(a)
+}
+
+console.log(singleNumber([2, 2, 1]))
+
+var removeElement = function (nums, val) {
+  var num2 = []
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      num2.push(nums[i])
+    }
+  }
+  return num2
+}
+
+console.log(removeElement([3, 2, 2, 3], 3))

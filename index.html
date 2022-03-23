@@ -7,43 +7,10 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <h2>
-        Generate a <br />
-        <span>random password</span>
-      </h2>
-      <p>Never use an insecure password again.</p>
-      <button>Generate passwords</button>
-      <div class="password-container">
-        <input
-          onclick="selectText()"
-          class="pwd1"
-          id="copy"
-          value="..."
-          type="text"
-        />
-        <input
-          onclick="selectText()"
-          class="pwd2"
-          id="copy"
-          value="..."
-          type="text"
-        />
-        <input
-          onclick="selectText()"
-          class="pwd3"
-          id="copy"
-          value="..."
-          type="text"
-        />
-        <input
-          onclick="selectText()"
-          class="pwd4"
-          id="copy"
-          value="..."
-          type="text"
-        />
-      </div>
-    </div>
+    <input type="text" id="input-el" autofocus />
+    <button id="input-btn">SAVE INPUT</button>
+    <button id="tab-btn">SAVE TAB</button>
+    <button id="delete-btn">DELETE ALL</button>
+    <ul id="ul-el"></ul>
   </body>
 </html>

@@ -1,52 +1,99 @@
-body {
-  margin: 0;
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
+* {
   box-sizing: border-box;
-  border: 1px solid #5f9341;
-  margin-bottom: 4px;
 }
 
-button {
-  background: #5f9341;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  font-family: "Inter", sans-serif;
+}
+#invoice-container {
+  background-color: #1f2937;
+  height: 600px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#header-invoice {
+  width: 550px;
+  height: 190px;
+  background-color: #3a69d2;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 10px 20px;
+}
+
+#header-invoice h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+}
+#header-invoice p {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+#header-invoice h2,
+p {
+  margin: 0;
+}
+
+#invoice-hero {
+  padding: 2rem;
+  padding-top: 3rem;
+}
+
+#invoice-btn {
+  display: flex;
+  justify-content: space-between;
+}
+#btn {
+  background-color: #d1d4f4;
+  color: #4a4e74;
   border: none;
-  font-weight: bold;
+  outline: none;
   cursor: pointer;
+  padding: 1.25em 1.75em;
+  border-radius: 0.5em;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-#input-btn:hover {
-  background-color: white;
-  color: #5f9341;
-  border: 1px solid #5f9341;
+#invoice-genarator {
+  margin-top: 16px;
+  border-bottom: 1px solid #d1d4f4;
+}
+#invoice-task,
+#invoice-total-heading {
+  display: flex;
+  justify-content: space-between;
+  color: #d5d4d8;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-#delete-btn {
-  background-color: white;
-  color: #5f9341;
-  border: 1px solid #5f9341;
-}
-
-#delete-btn:hover {
-  background: #5f9341;
+#invoice-total {
+  text-align: end;
+  font-size: 2rem;
   color: white;
-}
-/* STYLE THE LIST ACCORDING TO THE DESIGN */
-ul {
-  list-style: none;
-  padding-left: 0;
+  font-weight: 600;
 }
 
-li {
-  margin-bottom: 5px;
-}
-
-a {
-  color: #5f9341;
+#invoice-footer button {
+  width: 100%;
+  margin-top: 32px;
+  padding: 1em 0;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  background-color: #3a69d2;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
 }

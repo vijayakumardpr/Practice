@@ -12,7 +12,7 @@ body {
 }
 #invoice-container {
   background-color: #1f2937;
-  height: 600px;
+  height: 700px;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -51,7 +51,8 @@ p {
   display: flex;
   justify-content: space-between;
 }
-#btn {
+
+.btn {
   background-color: #d1d4f4;
   color: #4a4e74;
   border: none;
@@ -64,13 +65,19 @@ p {
 }
 
 #invoice-genarator {
-  margin-top: 16px;
   border-bottom: 1px solid #d1d4f4;
 }
+
+#invoice-genarator .dummy {
+  display: flex;
+  justify-content: space-between;
+}
+
 #invoice-task,
 #invoice-total-heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #d5d4d8;
   font-weight: 700;
   font-size: 16px;
@@ -96,4 +103,17 @@ p {
   font-size: 16px;
   font-weight: 500;
   font-family: inherit;
+}
+
+.dummy {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.dummy:last-child {
+  margin-bottom: 15px;
+}
+
+.unselect {
+  pointer-events: none;
 }

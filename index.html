@@ -2,43 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Invoice Generator</title>
+    <title>HTML/CSS Project-3</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="images/sophie.png" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
   </head>
   <body>
-    <div id="invoice-container">
-      <div id="header-invoice">
-        <h2>Invoice creator</h2>
-        <p>Thanks for choosing GoodCorp, LLC!</p>
+    <header class="dark-mode">
+      <div class="container">
+        <h1>
+          Hello, my name is <br />
+          <span class="heading">Sophie</span>
+        </h1>
+        <img src="images/sophie.png" alt="sophie-profile" />
       </div>
-      <div id="invoice-hero">
-        <div id="invoice-btn">
-          <button class="btn" id="wash-car">Wash car: $10</button>
-          <button class="btn" id="mow-lawn">Mow Lawn: $20</button>
-          <button class="btn" id="pull-weeds">Pull Weeds: $30</button>
-        </div>
-        <div id="invoice-task">
-          <h5>TASK</h5>
-          <h5>TOTAL</h5>
-        </div>
-        <div id="invoice-genarator"></div>
-        <div id="invoice-total-heading">
-          <h5>NOTES</h5>
-          <h5>TOTAL AMOUNT</h5>
-        </div>
-        <div id="invoice-total">$0</div>
-
-        <div id="invoice-footer">
-          <button>Send invoice</button>
-        </div>
+    </header>
+    <section class="about-me">
+      <div class="container">
+        <h2>I am a <span class="heading">graphic designer</span></h2>
+        <p>
+          Ultricies morbi urna lectus magna quisque ultricies velit enim nisi mi
+          volutpat amet id id porta auctor at viverra consequat turpis quam enim
+          amet vulputate.
+        </p>
+        <button class="btn btn-about">See my work</button>
       </div>
-    </div>
+    </section>
+    <section class="articles dark-mode">
+      <div class="container">
+        <h2>
+          My most recent
+          <span class="heading">article</span>
+        </h2>
+        <article>
+          <h3>Design systems that scale</h3>
+          <p class="author">
+            Writen by <span>Sophie</span> on <span>June 19, 2020</span>
+          </p>
+          <p>
+            Ultricies morbi urna lectus magna quisque ultricies velit enim nisi
+            mi volutpat amet id id porta auctor at viverra consequat turpis quam
+            enim... <a href="#">continue reading</a>
+          </p>
+          <button class="btn btn-article">See all my articles</button>
+        </article>
+      </div>
+    </section>
   </body>
 </html>

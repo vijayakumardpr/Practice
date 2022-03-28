@@ -2,57 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>HTML/CSS Project-3</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="images/sophie.png" />
+    <title>JS Challenge</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="dark-mode">
-      <div class="container">
-        <h1>
-          Hello, my name is <br />
-          <span class="heading">Sophie</span>
-        </h1>
-        <img src="images/sophie.png" alt="sophie-profile" />
+    <div id="container">
+      <div id="search">
+        <label for="searchInput">Search Users</label>
+        <input id="searchInput" type="text" />
       </div>
-    </header>
-    <section class="about-me">
-      <div class="container">
-        <h2>I am a <span class="heading">graphic designer</span></h2>
-        <p>
-          Ultricies morbi urna lectus magna quisque ultricies velit enim nisi mi
-          volutpat amet id id porta auctor at viverra consequat turpis quam enim
-          amet vulputate.
-        </p>
-        <button class="btn btn-about">See my work</button>
-      </div>
-    </section>
-    <section class="articles dark-mode">
-      <div class="container">
-        <h2>
-          My most recent
-          <span class="heading">article</span>
-        </h2>
-        <article>
-          <h3>Design systems that scale</h3>
-          <p class="author">
-            Writen by <span>Sophie</span> on <span>June 19, 2020</span>
-          </p>
-          <p>
-            Ultricies morbi urna lectus magna quisque ultricies velit enim nisi
-            mi volutpat amet id id porta auctor at viverra consequat turpis quam
-            enim... <a href="#">continue reading</a>
-          </p>
-          <button class="btn btn-article">See all my articles</button>
-        </article>
-      </div>
-    </section>
+
+      <ul id="results">
+        <li class="name">Karl</li>
+        <li class="name">Per</li>
+        <li class="name">Katie</li>
+        <li class="name">Lupe</li>
+        <li class="name">Katherine</li>
+        <li class="name">Kelly</li>
+        <li class="name">Kurt</li>
+        <li class="name">Fred</li>
+      </ul>
+    </div>
   </body>
 </html>

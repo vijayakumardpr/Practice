@@ -7,22 +7,20 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="container">
-      <div id="search">
-        <label for="searchInput">Search Users</label>
-        <input id="searchInput" type="text" />
+    <div class="carousel">
+      <div class="carousel-item carousel-item-visible">
+        <a href="https://google.com" target="_blank"
+          ><img src="images/1.jpg"
+        /></a>
       </div>
-
-      <ul id="results">
-        <li class="name">Karl</li>
-        <li class="name">Per</li>
-        <li class="name">Katie</li>
-        <li class="name">Lupe</li>
-        <li class="name">Katherine</li>
-        <li class="name">Kelly</li>
-        <li class="name">Kurt</li>
-        <li class="name">Fred</li>
-      </ul>
+      <div class="carousel-item"><img src="images/2.jpg" /></div>
+      <div class="carousel-item"><img src="images/3.jpg" /></div>
+      <div class="carousel-actions">
+        <button id="carousel-button-prev" aria-labels="Previous slide">
+          <
+        </button>
+        <button id="carousel-button-next" aria-labels="next slide">></button>
+      </div>
     </div>
   </body>
 </html>

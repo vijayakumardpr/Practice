@@ -2,28 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Password Generator</title>
+    <title>Dice Game</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <h2>
-        Generate a <br />
-        <span>random password</span>
-      </h2>
-      <p>Never use an insecure password again.</p>
-      <input type="number" id="input" />
-      <button>Generate passwords</button>
-      <div class="password-container">
-        <input onclick="copy()" class="pwd1" value="..." type="text" />
-        <input onclick="copy()" class="pwd2" value="..." type="text" />
-        <input onclick="copy()" class="pwd3" value="..." type="text" />
-        <input onclick="copy()" class="pwd4" value="..." type="text" />
+    <div class="container">
+      <h1 id="message">Player 1 Turn</h1>
+      <div class="players">
+        <div id="player1">
+          <h1>
+            Score:
+            <span id="player1Scoreboard">0</span>
+          </h1>
+          <div id="player1Dice" class="dice active">-</div>
+          <span id="count"></span>
+        </div>
+        <div id="player2">
+          <h1>
+            Score:
+            <span id="player2Scoreboard">0</span>
+          </h1>
+          <div id="player2Dice" class="dice">-</div>
+          <span id="count2"></span>
+        </div>
       </div>
-    </div>
 
-    <!-- <input id="input" type="text" /> -->
-    <!-- <button id="copy">Copy</button> -->
+      <h2></h2>
+
+      <button id="rollBtn">Roll Dice 🎲</button>
+      <button id="resetBtn">Reset Game 🔁</button>
+    </div>
   </body>
 </html>

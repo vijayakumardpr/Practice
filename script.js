@@ -1,69 +1,41 @@
-fetch(
-  "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
-)
-  .then((res) => res.json())
-  .then((data) => {
-    document.body.style.backgroundImage = `url(${data.urls.regular})`
-    document.getElementById("author").textContent = `By: ${data.user.name}`
-  })
-  .catch((err) => {
-    // Use a default background image/author
-    document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1560008511-11c63416e52d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI4NDIxMTc&ixlib=rb-1.2.1&q=80&w=1080
-)`
-    document.getElementById("author").textContent = `By: Dodi Achmad`
-  })
+async function getPhotos() {
+  let response = await fetch("photos.json")
+  let photos = await response.json()
 
-fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-  .then((res) => {
-    if (!res.ok) {
-      throw Error("Something went wrong")
-    }
-    return res.json()
-  })
-  .then((data) => {
-    // console.log(data)
-    document.getElementById("crypto-top").innerHTML = `
-    <img src="${data.image.small}" alt="">
-    <span>${data.name}</span>
-    `
-    document.getElementById("crypto-price").innerHTML = `
-    <p> 🎯: ${data.market_data.current_price.usd}</p>
-    <p> ☝️:${data.market_data.high_24h.usd}</p>
-    <p> 👇:${data.market_data.low_24h.usd}</p>
-    
-    `
-  })
-  .catch((err) => console.error(err))
-
-function currentTime() {
-  const date = new Date()
-
-  document.querySelector(".time").textContent = date.toLocaleString("en-us", {
-    timeStyle: "short",
-  })
+  return photos
 }
 
-setInterval(currentTime, 1000)
+function getPhotosHtml(photos) {
+  let myPhotosHtml = photos
+    .map((photo) => {
+      return `<img class="my-photo"  src="https://picsum.photos/id/${photo.id}/100/100" alt="${photo.title}"/>`
+    })
+    .join("")
 
-navigator.geolocation.getCurrentPosition((position) => {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=8cced5cba82477bf665d807a483b9b90&units=metric`
-  )
-    .then((res) => {
-      console.log(res.status)
-      if (!res.ok) {
-        throw Error("Weather data not available")
-      }
-      return res.json()
+  return `<div class="my-photos" >${myPhotosHtml}</div>`
+}
+
+getPhotos().then((photos) => {
+  document.body.innerHTML = `
+  <div class="my-gallery">
+  <img style="display: inline" class="my-photo" id="my-selected-photo"
+  src="https://picsum.photos/id/1/200/200"/>  
+  ${getPhotosHtml(photos)}
+  </div>
+  `
+
+  let myPhotoImgs = [...document.getElementsByClassName("my-photo")]
+
+  myPhotoImgs.forEach((photoImg, array) => {
+    photoImg.addEventListener("click", () => {
+      let selectedPhotoSrc = `${photoImg.src.substr(
+        0,
+        photoImg.src.length - 7
+      )}200/200`
+
+      let selectedPhoto = document.getElementById("my-selected-photo")
+      console.log(selectedPhoto)
+      selectedPhoto.src = selectedPhotoSrc
     })
-    .then((data) => {
-      console.log(data.weather[0])
-      document.getElementById("weather-top").innerHTML = `
-      <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" />
-      <p>${Math.round(data.main.temp)}<sup>ºC<sup></p>
-      
-      `
-      document.getElementById("weather").innerHTML += `<p>${data.name}</p>`
-    })
-    .catch((err) => console.log(err))
+  })
 })

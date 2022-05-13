@@ -1,15 +1,10 @@
-// javascript
-
-const get = element => document.getElementById(element);
-
-let open = get("menu-btn");
-let nav = get("nav");
-let exit = get("exit-btn");
-
-open.addEventListener('click', () => {
-    nav.classList.add('open-nav');
-})
-
-exit.addEventListener('click', () => {
-    nav.classList.remove('open-nav');
-})
+fetch("http://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .then((data) => {
+    let result = data
+      .filter((v) => v.name.toLowerCase().includes("k"))
+      .map(({ name, email }) => {
+        return { name, email }
+      })
+    console.log(result)
+  })
